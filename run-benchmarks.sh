@@ -26,7 +26,8 @@ python kafka-python-benchmark.py --client_type consumer --brokers $BROKERS --top
 echo "==================="
 
 echo "Running Tests for AIOKafka"
-python aiokafka-benchmark.py --brokers $BROKERS --topic $TOPIC --num_messages $NUM_MESSAGES --msg_size $MSG_SIZE --num_runs $NUM_RUNS
+python aiokafka-benchmark.py --client_type producer --brokers $BROKERS --topic $TOPIC --num_messages $NUM_MESSAGES --msg_size $MSG_SIZE --num_runs $NUM_RUNS
+python aiokafka-benchmark.py --client_type consumer --brokers $BROKERS --topic $TOPIC --num_messages $NUM_MESSAGES --msg_size $MSG_SIZE --num_runs $NUM_RUNS
 echo "==================="
 
 

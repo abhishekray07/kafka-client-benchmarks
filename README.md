@@ -1,28 +1,37 @@
 
 # Performance Comparison for Different Kafka Python Clients
 
-Tests run on a Macbook Pro:
+## Caveats
 
-## Producer Test Results
+Tests run on a Macbook Pro (2017):
+- 3.1 GHz Intel Core i5
+
+
+Test setup:
+
+- Single Kafka broker
+
+
+## Producer Results
 
 1. Confluent Kafka Python Library
 
 ```bash
-Confluent Kafka Python Test Results:
+Confluent Kafka Python producer Results:
 Number of Runs: 5, Number of messages: 100000, Message Size: 100 bytes.
-Average Time to send 100000: 2.6532379627227782 seconds.
-Messages / sec: 37689.79692171261
-MB / sec : 3.5943791314804656
+Average Time for 100000 messages: 4.487483406066895 seconds.
+Messages / sec: 22284.204965483343
+MB / sec : 2.1251873937114087
 ```
 
 2. Kafka Python
 
 ```bash
-Kafka-Python Producer Results:
+Kafka-Python producer Results:
 Number of Runs: 5, Number of messages: 100000, Message Size: 100 bytes.
-Average Time to send 100000: 8.682069730758666 seconds.
-Messages / sec: 11517.990882487611
-MB / sec : 1.0984412081229793
+Average Time for 100000 messages: 8.761995649337768 seconds.
+Messages / sec: 11412.92509173501
+MB / sec : 1.0884213535056122
 ```
 
 3. AIOKafka
@@ -30,7 +39,39 @@ MB / sec : 1.0984412081229793
 ```bash
 AIOKafka Producer Results:
 Number of Runs: 5, Number of messages: 100000, Message Size: 100 bytes.
-Average Time to send 100000: 2.2853951930999754 seconds.
-Messages / sec: 43756.108484833705
-MB / sec : 4.17290768478715
+Average Time for 100000 messages: 2.2214564800262453 seconds.
+Messages / sec: 45015.51162452598
+MB / sec : 4.2930137276197415
+```
+
+## Consumer Results
+
+1. Confluent Kafka
+
+```bash
+Confluent Kafka Python consumer Results:
+Number of Runs: 5, Number of messages: 100000, Message Size: 100 bytes.
+Average Time for 100000 messages: 1.6225053787231445 seconds.
+Messages / sec: 61633.07765345994
+MB / sec : 5.8777883199176735
+```
+
+2. Kafka-Python
+
+```bash
+Kafka-Python consumer Results:
+Number of Runs: 5, Number of messages: 100000, Message Size: 100 bytes.
+Average Time for 100000 messages: 9.437553405761719 seconds.
+Messages / sec: 10595.966528671406
+MB / sec : 1.010510113589421
+```
+
+3. AIOKafka
+
+```bash
+AIOKafka Consumer Results:
+Number of Runs: 5, Number of messages: 100000, Message Size: 100 bytes.
+Average Time for 100000 messages: 1.6015226364135742 seconds.
+Messages / sec: 62440.57856337173
+MB / sec : 5.954797607743428
 ```
