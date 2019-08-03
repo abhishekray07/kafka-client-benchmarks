@@ -9,6 +9,6 @@ def print_results(test_name, run_times, num_messages, msg_size):
     messages_per_sec = len(run_times) * num_messages / total_run_times
     mb_per_sec = messages_per_sec * msg_size / (1024 * 1024)
     
-    print(f"Average Time to send {num_messages}: {time_to_send_messages} seconds.")
+    print(f"Average Time for {num_messages} messages: {time_to_send_messages} seconds.")
     print(f"Messages / sec: {messages_per_sec}")
     print(f"MB / sec : {mb_per_sec}")
