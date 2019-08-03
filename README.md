@@ -22,3 +22,13 @@ Average Time to send 100000: 8.682069730758666 seconds.
 Messages / sec: 11517.990882487611
 MB / sec : 1.0984412081229793
 ```
+
+3. AIOKafka
+
+```bash
+AIOKafka Producer Results:
+Number of Runs: 5, Number of messages: 100000, Message Size: 100 bytes.
+Average Time to send 100000: 2.2853951930999754 seconds.
+Messages / sec: 43756.108484833705
+MB / sec : 4.17290768478715
+```
