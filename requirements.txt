@@ -1,0 +1,4 @@
+aiokafka
+confluent-kafka
+click
+kafka-python
